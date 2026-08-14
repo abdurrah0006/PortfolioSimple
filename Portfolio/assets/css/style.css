@@ -1,0 +1,551 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+/*==================== CORE BASICS ====================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #0c0f17;
+    --container-bg: #131722;
+    --card-hover-bg: #1b2030;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --gradient-primary: linear-gradient(135deg, #009dff, #ff00ff);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/*==================== NAVIGATION HEADER ====================*/
+header {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    max-width: 1100px;
+    background-color: rgba(19, 23, 34, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-main);
+    padding: 0.75rem 2rem;
+    border-radius: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    background: var(--gradient-primary);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+li a {
+    position: relative;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+li a:hover {
+    color: var(--text-main);
+}
+
+li a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    height: 3px;
+    bottom: -6px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: var(--gradient-primary);
+}
+
+li a:hover::before {
+    width: 100%;
+}
+
+.visit-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--gradient-primary);
+}
+
+.visit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 157, 255, 0.3);
+}
+
+#menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/*==================== SECTION LAYOUT SPECIFICATION ====================*/
+section {
+    min-height: 100vh;
+    padding: 8rem 10% 4rem 10%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    letter-spacing: -1px;
+}
+
+/*==================== ABOUT COMPONENT ====================*/
+.about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about img {
+    width: 25vw;
+    min-width: 260px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.info-box h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.info-box h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.info-box span {
+    background: var(--gradient-primary);
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    border-radius: 3rem;
+    padding: 0.7rem 1.8rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 0, 255, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-main);
+}
+
+.social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.social a {
+    color: var(--text-muted);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social i {
+    font-size: 2.2rem;
+}
+
+.social a:hover {
+    color: var(--text-main);
+    transform: translateY(-3px);
+}
+
+/*==================== EXPERIENCE COMPONENT ====================*/
+.experience-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience img {
+    width: 22vw;
+    min-width: 240px;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.grid-card {
+    background-color: var(--container-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.grid-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--card-hover-bg);
+    border-color: rgba(0, 157, 255, 0.2);
+}
+
+.grid-card i {
+    font-size: 2rem;
+    background: var(--gradient-primary);
+    background-clip: text;
+    color: transparent;
+}
+
+.grid-card span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.grid-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.grid-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/*==================== PROJECTS COMPONENT ====================*/
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-card {
+    background-color: var(--container-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    background-color: var(--card-hover-bg);
+    transform: translateY(-8px);
+    border-color: rgba(255, 0, 255, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.project-card .btn-group {
+    margin-top: auto;
+    width: 100%;
+}
+
+.project-card .btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 0;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-main);
+}
+
+.project-card .btn:hover {
+    background: var(--text-main);
+    color: var(--bg-color);
+}
+
+/*==================== CONTACT COMPONENT ====================*/
+.contact {
+    min-height: auto;
+    padding: 6rem 10%;
+}
+
+.contact .input-box {
+    background-color: var(--container-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 1rem 1.5rem 1rem 3rem;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 3rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-field input:focus {
+    border-color: #009dff;
+}
+
+.input-field i {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--text-muted);
+}
+
+.submit-btn {
+    background: var(--gradient-primary);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 157, 255, 0.2);
+}
+
+/*==================== FOOTER COMPONENT ====================*/
+footer {
+    background-color: var(--container-bg);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+footer ul a {
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer ul a:hover {
+    color: var(--text-main);
+}
+
+.copyright {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/*==================== SCROLLBAR CONFIGURATION ====================*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #009dff, #ff00ff);
+    border-radius: 10px;
+}
+
+/*==================== RESPONSIVE BREAKPOINTS ====================*/
+@media (max-width: 992px) {
+    section {
+        padding: 6rem 5% 3rem 5%;
+    }
+    .about .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .info-box {
+        align-items: center;
+        text-align: center;
+    }
+    .info-box h1 {
+        font-size: 3.5rem;
+    }
+    .experience-info {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+    .experience img {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 90%;
+        padding: 0.75rem 1.5rem;
+    }
+    .nav-links {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--container-bg);
+        padding: 2rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: center;
+        gap: 1.5rem;
+        display: none;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .visit-btn {
+        display: none;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        font-size: 2.25rem;
+    }
+}

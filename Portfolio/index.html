@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Mubashir | Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Mubashir</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <button class="visit-btn" onclick="window.open('https://github.com', '_blank')">Visit Github</button>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <img src="images/profile.jpg" alt="Mubashir Profile Picture" onerror="this.src='https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80'">
+
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi, I am</h3>
+                    <h1>Mubashir</h1>
+                    <span>Full Stack Web Developer</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+
+                <div class="social">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class='bx bx-code-alt'></i> 
+                    <span>Frontend Development</span>
+                    <h3>Expertise</h3>
+                    <p>Crafting responsive, high-fidelity user interfaces utilizing cutting-edge semantic styling architectures.</p>
+                </div>
+    
+                <div class="grid-card">
+                    <i class="bx bx-bracket-curly"></i>
+                    <span>Graphic Designer</span>
+                    <h3>Creative</h3>
+                    <p>Producing modern minimalist aesthetic assets, visual identity layouts, and pixel-perfect design files.</p>
+                </div>
+    
+                <div class="grid-card">
+                    <i class='bx bx-server' ></i> 
+                    <span>Backend Development</span>
+                    <h3>Architecture</h3>
+                    <p>Building secure server infrastructures, scalable API management components, and logical database systems.</p>
+                </div>
+    
+                <div class="grid-card">
+                    <i class='bx bx-message-code'></i> 
+                    <span>Full-Stack Engineer</span>
+                    <h3>Integration</h3>
+                    <p>Connecting state management modules seamlessly between production environments using React and Node.js.</p>
+                </div>
+            </div>
+            
+            <img src="images/profile.jpg" alt="Experience Graphic Panel" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80'">
+        </div>
+    </section>
+
+    <section class="project" id="project">
+        <h2 class="section-title">Recent Projects</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/project-1.png" alt="Project Showcase Asset" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80'">
+                <h3>Project Alpha</h3>
+                <p>An interactive, state-driven real-time management dashboard application.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/project-2.png" alt="Project Showcase Asset" onerror="this.src='https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=400&q=80'">
+                <h3>Project Beta</h3>
+                <p>A beautiful e-commerce landing platform built using optimized styling layouts.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/project-3.png" alt="Project Showcase Asset" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&q=80'">
+                <h3>Project Omega</h3>
+                <p>A full-stack collaborative application offering deep cloud performance tuning metrics.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact Me</h2>
+            
+            <form class="contact-form" onsubmit="event.preventDefault();">
+                <div class="input-field">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">&copy; All Rights Reserved | Mubashir</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
